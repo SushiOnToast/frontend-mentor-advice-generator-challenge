@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    font-family: "Manrope", sans-serif;
+}
+
+#main-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(218, 23%, 16%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#advice-container {
+    width: 600px;
+    height: 375px;
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 20px;
+    box-shadow: 20px 20px 50px 7px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 5%;
+}
+
+button {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    bottom: -10%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background-color: hsl(150, 100%, 66%);
+    background-image: url(images/icon-dice.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    transition-duration: 0.4s;
+
+}
+
+button:hover {
+    box-shadow: 0px 0px 45px 10px rgba(82, 255, 168, 0.6);
+}
+
+p {
+    font-weight: 800;
+    text-align: center;
+}
+
+#advice-number {
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 6px;
+}
+
+#advice-text {
+    font-size: 28px;
+    color: hsl(193, 38%, 86%);
+    margin-top: 30px;
+    line-height: 40px;
+}
+
+/* I put the divider in a container so that the background image url could be changed easily when
+the screen changed size (there were two separate dividers for mobile and desktop */
+#divider-container {
+    width: 100%;
+    background-image: url('./images/pattern-divider-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom 25% right 50%;
+    background-size: auto 20px;
+    height: 20%;
+    position:relative;
+    bottom: -5%;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: hsl(193, 38%, 86%);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+a {
+    color: hsl(193, 38%, 86%);
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: hsl(150, 100%, 66%)
+}
+
+/* responsive design using media queries */
+
+@media (max-width: 670px) {
+    #advice-container {
+        margin: 35px;
+    }
+}
+
+@media (max-width: 578px) {
+    #advice-container {
+        margin: 5px;
+        padding: 25px;
+        max-width: 350px;
+        height: 325px;
+        border-radius: 10px;
+    }
+
+    #advice-number {
+        margin-top: 15px;
+        font-size: 11px;
+    }
+
+    #advice-text {
+        font-size: 23px;
+        margin-top: 20px;
+        line-height: 30px;
+    }
+
+    #divider-container {
+        background-image: url('images/pattern-divider-mobile.svg');
+        bottom:-1%;
+        background-size: auto 15px;
+    }
+
+    button {
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+
