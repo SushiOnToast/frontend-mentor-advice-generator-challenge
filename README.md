@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Hosted on github pages](#)
+- Solution URL: [Hosted on github pages](https://sushiontoast.github.io/frontend-mentor-advice-generator-challenge/)
 
 ## My process
 
